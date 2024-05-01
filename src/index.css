@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 150px 0 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.topBarOuter {
+  display: flex;
+  padding: 14px 1rem 9px 0;
+  margin: 0 auto;
+}
+.searchBarOuter input {
+  width: 100%;
+  height: 41px;
+  border-radius: 7px;
+  border: none !important;
+  color: gray;
+  padding: 10px;
+}
+.searchBarOuter {
+  width: 22rem;
+  margin: 0 18px;
+}
+.loader {
+  text-align: center;
+  width: 100%;
+}
+.searchResult li {
+  color: black;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+.searchResult {
+  position: absolute;
+  background: #fff;
+  width: 22rem;
+  padding: 0 17px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: -6px;
+  z-index: -1;
+}
+
+.cartOut {
+  position: relative;
+  margin-top: 13px;
+}
+
+.cartOut span {
+  position: absolute;
+  top: -16px;
+  right: 2px;
+}
+
+.product-collunm button {
+  margin: 0 0 10px 10px;
+}
+.product-collunm a img {
+  height: 380px;
+}
+.single-product-row p {
+  justify-content: space-between;
+  display: flex;
+  padding: 10px 0;
+  margin: 0 0 4px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+}
+.single-product-row h6 {
+  font-size: 22px;
+}
+
+.productTitle {
+  height: 68px;
+}
+.container {
+  width: 100%;
+}
+.cart-outer a {
+  color: #1976d2;
+}
+@media (min-width: 1536px) {
+  .container,
+  body .MuiContainer-maxWidthLg {
+    max-width: 1536px;
+  }
+}
