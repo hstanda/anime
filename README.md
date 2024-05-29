@@ -9,6 +9,9 @@
 - Make intuitive UI considerations, add comments if necessary to explain your decision thought process.
 - General best practices around component structuring
 
+## Demo link
+http://anime.harjeevan.ca/
+
 API Url
 
 https://api.jikan.moe/v4/anime?q= https://api.jikan.moe/v4/anime/{id}/full
