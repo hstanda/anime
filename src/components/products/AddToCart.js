@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "@mui/material/Button";
 import useLocalStorageState from "use-local-storage-state";
-import { errorMsg, successMsg } from "../../utility/toaster-msg";
+
 const AddToCart = ({ product, addToCart }) => {
   const [cart, setCart] = useLocalStorageState("cart", []);
 
@@ -14,16 +14,11 @@ const AddToCart = ({ product, addToCart }) => {
     );
 
     if (existingItemIndex !== -1) {
-      console.log("initializedCart1212", initializedCart);
       const updatedCart = [...initializedCart];
-      // updatedCart[existingItemIndex].count++;
+      updatedCart[existingItemIndex].count++;
       setCart(updatedCart);
-      errorMsg(
-        "Product is in cart. To add more, increase quantity in cart page."
-      );
     } else {
       setCart([...initializedCart, { ...product, count: 1 }]);
-      successMsg("Product is added succuessfully in cart");
     }
   };
 

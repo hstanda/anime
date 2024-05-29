@@ -15,7 +15,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .topBarOuter {
   display: flex;
   padding: 14px 1rem 9px 0;
@@ -88,9 +87,9 @@ code {
 .container {
   width: 100%;
 }
-.cart-outer a {
-  color: #1976d2;
-}
+/* body .singlePageOuter {
+  max-width: 1200px;
+} */
 @media (min-width: 1536px) {
   .container,
   body .MuiContainer-maxWidthLg {

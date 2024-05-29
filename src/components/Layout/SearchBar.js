@@ -1,7 +1,8 @@
+import axios from "axios";
+
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
-import productApi from "../../services/product";
 
 function SearchBar() {
   console.log(
@@ -21,7 +22,9 @@ function SearchBar() {
   // get all products
   const searchProductHandler = async (e) => {
     try {
-      const response = await productApi.getAllProduct(e);
+      const response = await axios.get(
+        `${process.env.REACT_APP_BASE_URL}anime?q=${e}&order_by=title&sort=asc&limit=10`
+      );
       setUserData(response.data.data);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -33,7 +36,7 @@ function SearchBar() {
   }, [location.pathname]); // Trigger effect when route changes
 
   const handleResultClick = () => {
-    setSearchTerm("");
+    setSearchTerm(""); // Clear search term when a result is clicked
   };
 
   return (
@@ -44,7 +47,7 @@ function SearchBar() {
             style={{ border: "2px solid gray" }}
             type="text"
             onChange={(e) => setSearch(e)}
-            value={searchTerm}
+            value={searchTerm} // Bind search term value to input
           />
         </div>
 
